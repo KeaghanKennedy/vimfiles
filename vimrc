@@ -49,6 +49,7 @@ endif
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
+  \ 'coc-graphql',
   \ 'coc-json', 
   \ 'coc-vetur', 
   \ ]
@@ -205,7 +206,7 @@ command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 syntax enable
 
 if has('termguicolors')
-				set termguicolors
+	set termguicolors
 endif
 
 "set background=dark
@@ -227,6 +228,9 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Use rainbow brackets
 let g:rainbow_active = 1
 
-" Ner Remaps
+" NerdCommenter Remaps
 nmap cc <Plug>NERDCommenterToggle
 vmap cc <Plug>NERDCommenterToggle
+
+set tabstop=2
+set shiftwidth=2
