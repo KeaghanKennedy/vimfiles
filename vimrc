@@ -49,19 +49,22 @@ endif
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
-  \ 'coc-graphql',
   \ 'coc-json', 
   \ 'coc-vetur', 
   \ 'coc-omnisharp', 
   \ ]
 
-" Coditionally install eslint and prettier
+" Coditionally install eslint, prettier and graphql
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
   let g:coc_global_extensions += ['coc-prettier']
 endif
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/graphql')
+  let g:coc_global_extensions += ['coc-graphql']
 endif
 
 " Use tab for trigger completion with characters ahead and navigate.
@@ -224,7 +227,7 @@ nmap <F6> :NERDTreeToggle<CR>
 set number
 
 " Ignore node_modules with ctrlp
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|dist\|git'
 
 " Use rainbow brackets
 let g:rainbow_active = 1
