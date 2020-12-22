@@ -52,6 +52,7 @@ let g:coc_global_extensions = [
   \ 'coc-graphql',
   \ 'coc-json', 
   \ 'coc-vetur', 
+  \ 'coc-omnisharp', 
   \ ]
 
 " Coditionally install eslint and prettier
@@ -209,7 +210,7 @@ if has('termguicolors')
 	set termguicolors
 endif
 
-"set background=dark
+set background=dark
 "let g:gruvbox_material_background = 'hard'
 
 colorscheme gruvbox
